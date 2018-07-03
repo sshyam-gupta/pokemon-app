@@ -8,7 +8,7 @@ You will need [Node.js](https://nodejs.org/en/download/) and [yarn](https://yarn
 
 ### INSTALL and START CLIENT
 
-    $ git clone git@github.com:Kiprosh/trackbees_client.git
+    $ git clone https://github.com/sshyam-gupta/hacker-news-app.git
     $ cd hacker-news-app
     $ yarn install
     $ yarn start
