@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import { PokemonList } from './Pokemon';
 import PokemonInfo from './Pokemon/PokemonInfo';
 import './App.css';
+
 const POKEMON_COUNT = [5, 10, 20, 25, 50];
 
 class App extends Component {
