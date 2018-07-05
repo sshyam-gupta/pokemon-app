@@ -1,22 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/App';
-import registerServiceWorker from './registerServiceWorker';
-import ApolloClient from "apollo-boost";
+import { BrowserRouter } from 'react-router-dom'
 import { ApolloProvider } from "react-apollo";
+import ApolloClient from "apollo-boost";
+
 import ErrorBoundary from './components/ErrorBoundary';
+import App from './components/App';
+
+import registerServiceWorker from './registerServiceWorker';
+import './index.css';
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000"
+  uri: "https://graphql-pokemon.now.sh/"
 });
 
 const MainApp = () => (
-  <ApolloProvider client={client}>
-    <ErrorBoundary>
-      <App />
-    </ErrorBoundary>
-  </ApolloProvider>
+	<BrowserRouter>
+		<ApolloProvider client={client}>
+			<ErrorBoundary>
+				<App />
+			</ErrorBoundary>
+		</ApolloProvider>
+	</BrowserRouter>
+
 );
 
 ReactDOM.render(<MainApp />, document.getElementById('root'));
