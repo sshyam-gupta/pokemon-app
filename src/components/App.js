@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import { PokemonList } from './Pokemon';
 import PokemonInfo from './Pokemon/PokemonInfo';
 import './App.css';
+const POKEMON_COUNT = [5, 10, 20, 25, 50];
 
 class App extends Component {
 	state = {
@@ -12,7 +13,7 @@ class App extends Component {
 
 	updatePokemonCount = val => {
 		this.setState({
-			pokemonCount: val
+			pokemonCount: parseInt(val.target.innerText, 10)
 		});
 	}
 
@@ -26,18 +27,19 @@ class App extends Component {
 								return <React.Fragment>
 									<div className="flex flex-row pv2">
 									Count --
-										<span className="ph2" value="5" onClick={() => {
-											this.updatePokemonCount(5);
-										}}>5</span> |
-										<span className="ph2" value="10" onClick={() => {
-											this.updatePokemonCount(10);
-										}}>10</span> |
-										<span className="ph2" value="20" onClick={() => {
-											this.updatePokemonCount(20);
-										}}>20</span> |
-										<span className="ph2" value="50" onClick={() => {
-											this.updatePokemonCount(50);
-										}}>50</span>
+										{
+											POKEMON_COUNT.map(
+												count =>
+													<span
+														className="ph2"
+														key={count}
+														value={count}
+														onClick={this.updatePokemonCount}
+													>
+														{count} |
+													</span>
+											)
+										}
 									</div>
 									<PokemonList pokemonCount={this.state.pokemonCount} />
 								</React.Fragment>
