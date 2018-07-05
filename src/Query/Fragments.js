@@ -3,8 +3,6 @@ import gql from "graphql-tag";
 const POKEMON_ATTACKS = gql`
 	fragment PokemonAttackInfo on Attack {
 		name
-		type
-		damage
 	}
 `
 
