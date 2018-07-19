@@ -1,7 +1,8 @@
 {
   "name": "pokemon-app",
   "version": "0.1.0",
-  "private": true,
+	"private": true,
+	"homepage": "https://react-pokemon-graphql.surge.sh",
   "dependencies": {
     "apollo-boost": "^0.1.10",
     "apollo-client-preset": "^1.0.8",
