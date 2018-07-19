@@ -41,3 +41,10 @@ input {
   cursor: pointer;
   max-width: 250px;
 }
+
+.header {
+	display: block;
+	height: 100px;
+	font-size: 23px;
+	padding: 20px;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Query } from 'react-apollo';
 
-import Pokemon from './Pokemon';
+import Pokemon from './Pokemon'; 
 import { GET_POKEMONS } from '../../Query/GetQuery';
 
 class PokemonList extends Component {
