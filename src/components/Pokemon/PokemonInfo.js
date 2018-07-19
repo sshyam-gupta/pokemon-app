@@ -20,6 +20,27 @@ class PokemonInfo extends Component {
 						<div>Name: {pokemon.name}</div>
 						<div className="mt3">Max CP: {pokemon.maxCP}</div>
 						<div>Max HP: {pokemon.maxHP}</div>
+
+						<div className="flex flex-row mt3">
+							<div className="w-25">
+								<div className="underline i">Special Attacks</div>
+								{
+									pokemon.attacks.special.map(
+										attack => <div key={attack.name}>{attack.name}</div>
+									)
+								}
+							</div>
+							<div className="w-35">
+								<div className="underline i">Fast Attacks</div>
+								{
+									pokemon.attacks.fast.map(
+										attack => <div key={attack.name}>{attack.name}</div>
+									)
+								}
+
+							</div>
+						</div>
+
 						<div className="mt3">Evolution(s):</div>
 						{
 							pokemon.evolutions ?
