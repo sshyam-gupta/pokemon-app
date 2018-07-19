@@ -1,5 +1,4 @@
 # GRAPHQL DEMO (POKEMON)
-## Note: This is not hacker news app :p
 
 ## Requirements
 
